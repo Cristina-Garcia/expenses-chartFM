@@ -1,18 +1,25 @@
-// import "./chart.js";
-
 import data from "./utiles/data.json" assert { type: "json" };
 
 const ctx = document.getElementById("chart-spending").getContext("2d");
+
+const days = data.map(function (index) {
+  return index.day;
+});
+// console.log(days);
+
+const amount = data.map(function (index) {
+  return index.amount;
+});
+// console.log(amount);
 
 function createChart(data) {
   return new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["mon", "tue", "wed", "thus", "fri", "sat", "sun"],
+      labels: days,
       datasets: [
         {
-          label: data.amount,
-          data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
+          data: amount,
           backgroundColor: [
             "hsl(10, 79%, 65%)",
             "hsl(10, 79%, 65%)",
@@ -37,6 +44,16 @@ function createChart(data) {
     },
     options: {
       hoverBackgroundColor: "true",
+      elements: {
+        bar: {
+          borderRadius: 5,
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
       scales: {
         x: {
           grid: {
