@@ -13,6 +13,8 @@
   height: 700px;
   flex-direction: column;
   gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 .balance {
@@ -22,7 +24,9 @@
   padding: 16px;
   background-color: var(--Soft-red);
   border-radius: 16px;
+  box-sizing: border-box;
   color: var(--Very-pale-orange);
+  inline-size: 100%;
 }
 .balance div p,
 .balance div h3 {
@@ -37,6 +41,7 @@
 .spending {
   background-color: var(--Very-pale-orange);
   border-radius: 16px;
+  inline-size: 100%;
 }
 .spending h2 {
   margin: 0;
