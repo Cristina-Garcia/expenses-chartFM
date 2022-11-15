@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .expenses {
@@ -33,10 +34,11 @@
   margin: 0;
 }
 .chart {
-  padding: 8px;
+  padding: 16px;
 }
 #chart-spending {
   border-bottom: 1px solid var(--Medium-brown);
+  padding-bottom: 16px;
 }
 .spending {
   background-color: var(--Very-pale-orange);
@@ -46,6 +48,7 @@
 .spending h2 {
   margin: 0;
   margin-top: 16px;
+
   padding-inline: 16px;
   color: var(--Dark-brown);
 }
@@ -59,10 +62,12 @@
 
 .total-spending div p {
   margin: 0;
+  color: var(--Medium-brown);
 }
 .percent-spending p:nth-child(1) {
   color: var(--Dark-brown);
   font-weight: 700;
+  text-align: right;
 }
 
 .total-spending div h2 {
